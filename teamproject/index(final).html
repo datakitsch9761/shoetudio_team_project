@@ -17,6 +17,18 @@
       rel="stylesheet"
       type="text/css"
     />
+    <link
+      href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link
+      href="https://cdn.rawgit.com/mdehoog/Semantic-UI/6e6d051d47b598ebab05857545f242caf2b4b48c/dist/semantic.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://code.jquery.com/jquery-2.1.4.js"></script>
+    <script src="https://cdn.rawgit.com/mdehoog/Semantic-UI/6e6d051d47b598ebab05857545f242caf2b4b48c/dist/semantic.min.js"></script>
     <title>SHOETUDIO</title>
   </head>
   <body>
@@ -45,12 +57,63 @@
               The new era of custom shoes<br />
               Starts right here on Shoetudio
             </h1>
-            <a class="btn btn-full" href="#">Log In</a>
+            <a class="btn btn-full" id="test" href="#">Log In</a>
             <a class="btn btn-ghost" href="#">Sign In</a>
+
+            <div class="ui modal test">
+              <div class="ui middle aligned center aligned grid">
+                <div class="column">
+                  <h2 class="ui blue image header">
+                    <img src="resources/img/Shoetudio_logo.png" class="image" />
+                    <div class="content">Welcome to Shoetudio</div>
+                  </h2>
+                  <form class="ui large form">
+                    <div class="ui segment">
+                      <div class="field">
+                        <div class="ui left icon input">
+                          <i class="user icon"></i>
+                          <input
+                            type="text"
+                            name="email"
+                            placeholder="E-mail address"
+                          />
+                        </div>
+                      </div>
+                      <div class="field">
+                        <div class="ui left icon input">
+                          <i class="lock icon"></i>
+                          <input
+                            type="password"
+                            name="password"
+                            placeholder="Password"
+                          />
+                        </div>
+                      </div>
+                      <div class="ui fluid large primary submit button">
+                        Login
+                      </div>
+                    </div>
+                  </form>
+
+                  <div class="ui message">
+                    New to us? <a href="#">Sign Up</a>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </section>
       </div>
     </div>
-    </div> 
+    <script>
+      $(function () {
+        $("#test").click(function () {
+          $(".test").modal("show");
+        });
+        $(".test").modal({
+          closable: true,
+        });
+      });
+    </script>
   </body>
 </html>

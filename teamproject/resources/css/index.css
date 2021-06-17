@@ -48,10 +48,11 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background: #111;
+  background: rgb(41, 41, 41);
   transition: 0.5s;
   z-index: 2;
 }
+
 .showcase.active {
   right: 300px;
 }
@@ -202,3 +203,41 @@ input[type="submit"]:active {
   }
 }
 /* ----------------------------------------- */
+
+/* LOGIN BTN */
+.login_button {
+  width: 3.5cm;
+  height: 1cm;
+  border-radius: 200px;
+}
+
+.login_button:hover,
+.login_button:active,
+input[type="submit"]:hover,
+input[type="submit"]:active {
+  background-color: #fffb00;
+  border-radius: 200px;
+}
+
+.login-full:hover,
+.login-full:active {
+  border: 1px solid #fffb00;
+  border-radius: 200px;
+}
+
+@media (max-width: 991px) {
+  .showcase,
+  .showcase header {
+    padding: 40px;
+  }
+  .text h2 {
+    font-size: 3em;
+  }
+  .text h3 {
+    font-size: 2em;
+  }
+
+
+  /* Modal Example */
+  /* The Modal (background) */
+  
